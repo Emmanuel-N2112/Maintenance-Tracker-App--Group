@@ -3,17 +3,16 @@ user style css
 -------------------------------------------
 
 body {
-	margin: 0;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
 	color: #333;	
-	background-color: #f4f4f4;
+	background-color: #ffffff;
 }
 
 .container {
 	display: grid;
-	grid-template-columns: auto 3fr;
+	grid-template-columns: 2fr 3fr;
 	grid-template-rows: auto auto 5fr auto;
 	grid-template-areas:
 		"header header"
@@ -27,12 +26,13 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: 
-            "header"
-            "navigation"
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "header header"
+            "navigation navigation"
             "main-content"
-            "footer";
+            "main-content"
+            "footer footer";
     }
 }
 
@@ -48,71 +48,129 @@ body {
 	grid-column: 1/3;
 	grid-area: navigation;
 	grid-row: 2/3;
-	
-    background-color: #f1f1f1;
-    margin-top: 1px;
+    display: block;
 }
 
-.menu li a {
-	padding: 0px 15px 0px 15px;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+.nav {
+	text-align: right;
+    margin: 0px;
+    padding: 0px;
+    background: #f1f1f1;
+}
+
+.nav li {
+    display: inline;
+    font-size: 20px;
+}
+
+.nav li a {
+    display: inline-block;
+    color: #337ab7;
+    text-align: right;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background: #555;
+    color: white;
+}
+
+.nav a:hover {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 0px;
+    }
+    .nav li a {
+        display: block;
+        text-align: left;
+        padding: 10px;
+        margin: 0px;
+    }
 }
 
 .nested {
     display: grid;
     grid-area: main-content;
     grid-column: 1/3;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 2fr 6fr;
     grid-template-areas: 
         "content1 content2";
-    
-    margin: 1px;
 }
 
 @media (max-width: 768px) {
     .nested {
+        grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         grid-template-areas: 
-            "content1"
+            "content1" 
             "content2";
     }
 }
 
-.vertical-menu {
-	grid-area: content1;
-    
-    padding: 0px 5px;
+@media (max-width: 482px) {
+    .nested {
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "content1"
+            "content2"
+    }
+}
+
+.v-menu {
+    grid-area: content1;
+    color: #555;
+    margin: 0px;
+    background-color: #333;
     font-family: sans-serif;
-	color: #999;
-    background: #191818;
+    padding: 0px;
 }
 
 .body-content {
     grid-area: content2;
     color: #000;
-	padding: 0px 10px;
-}
-
-.body-content p{
-    font: 24px 300 Roboto; 
+    padding: 0px 10px;
 }
 
 .body-content h2{
-    margin-top: 6px;
     margin-bottom: 16px !important;
     font: 300 Roboto;
     font-size: 44px;
 }
 
+.body-content p{
+    font: 24px 300 Roboto;
+}
+
 @media (max-width: 768px) {
     .body-content h2{
-        font-size: 36px;
+        font-size: 29px;
     }
+}
+
+@media (max-width: 482px) {
+    .body-content h2 {
+        font-size: 24px;
+    }
+}
+
+.content {
+	font-size: 20px;
 }
 
 footer {
 	grid-area: footer;
+    margin: 1px 0px 5px 0px;
 	grid-column: 1/3;
-    
 	display: block;
 	padding: 20px;
 	background-color: #808080;
@@ -121,31 +179,70 @@ footer {
 	text-align: center;
 }
 
-.content {
-	font-size: 20px;
+h1 {
+	font-size: 2em;
+	font-family: inherit;
+	line-height: 1.5;
+	color: inherit;
 }
 
-.nav {
-	text-align: right;
+button, input {
+    font: inherit;
+    color: inherit;
 }
 
-.nav li {
-	font-size: 20px;
-    display: inline
+.submit {
+    margin: 10px 20px;
+    background-color:  rgb(40, 167, 69);
+    background-image: linear-gradient(-180deg, rgb(52, 208, 88));
+    color: #fff;
+    padding: 15px 20px 15px 20px;
+    display: block;
+    border: 1px solid;
+	border-radius: 6px;
+	border-bottom-color: rgba(27, 31, 35, 0.2);
+	
 }
 
-.nav li:hover {
-    background: blue;
+.submit:hover {
+    opacity: 0.8
 }
 
+@media (max-width: 282px) {
+    .submit {
+        padding: 12px 0px;
+        margin: 5px 0px 5px 10px;
+        width: 90%;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="search"] {
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 5px;
+	-webkit-appearance: textfield;
+}
+
+@media (max-width: 1192px) {
+    input[type="search"] {
+        margin: 10px 0px;
+    }
+}
 @media (max-width: 768px) {
-    .nav li {
-        display: block;
+    input[type="search"] {
+        margin: 10px 0px;
         width: 100%;
-        text-align: left;
-        padding-left: 0px;
-        margin-left: 0px;
-        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 482px) {
+    input[type="search"] {
+        margin: 10px 0px;
+        width: 100%;
     }
 }
 
@@ -159,131 +256,38 @@ a:active, a:hover {
 	outline: none;
 }
 
+/* This ul helps with the vertical menu */
 ul {
-	list-style: none;
-    padding: 0;
     background: transparent;
 }
 
-h1 {
-	font-size: 2em;
-	font-family: inherit;
-	line-height: 1.5;
-	color: inherit;
-}
-
-button {
-    padding: 0;
-    border: 0;
-    margin: 5px 0px;
-}
-
-input {
-	padding: 0;
-	border: 0;
-	margin: 0;
-	font: inherit;
-	color: inherit;
-}
-
-.search {
-    background: #999;
-    margin: 5px 0px;
-    padding: 2px;
-    width: 30%;
-}
-
-button {
-	background-color:  rgb(40, 167, 69);
-	color: #fff;
-	display: block;
-	border-radius: 6px;
-	border-bottom-color: rgba(27, 31, 35, 0.2);
-	width: 100%;
-    font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI";
-}
-
-input[type="search"] {
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	padding: 5px;
-	box-sizing: content-box;
-    margin: 10px 10px;
-	-webkit-appearance: textfield;
-}
-
-@media (max-width: 768px) {
-    input[type="search"] {
-        margin-left: 0px;
-        width: auto;
+@media (max-width: 482px) {
+    h2, h3 {
+        text-align: center
     }
 }
-
-input[type="text"] {
-	margin-bottom: 10px;
-	padding: 15px;
-	display: block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-    width: 100%;
-}
-
-input[type="password"] {
-	margin-bottom: 10px;
-	padding: 15px;
-	display: block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    input[type="text"] {
-        display: block;
-        width: 100%;
-        padding: 15px 5px 15px 5px; 
-    }
-    input[type="password"] {
-        display: block;
-        width: 100%;
-        padding: 15px 5px 15px 5px;
-    }
-}
-
-.vertical-menu: -moz-placeholder {
-	color: #999;
-	opacity: 1;
-}
-
-.vertical-menu li {
+.v-menu li {
     list-style: none;
-    padding: 10px 0px;
+    padding: 10px 20px;
+    border-top: 4px #333 solid;
 }
 
-.vertical-menu li a {
+.v-menu h3 {
+    padding: 10px 20px;
+}
+
+.v-menu li:hover {
+    background: #111;
+    font: 600;
+}
+
+.v-menu li a {
     display: inline;
     color: #999;
-    border-bottom: 1px #333 solid;
-    border-top: 1px #333 solid;
 }
 
-.vertical-menu a:hover {
+.v-menu a:hover {
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .vertical-menu {
-        width: 195px;
-    }
-}
-
-.checkbox {
-	position: relative;
-	display: inline;
-	margin: 15px 5px 15px;
-	cursor: pointer;
 }
 
 .text-left {
@@ -315,4 +319,57 @@ input[type="password"] {
 }
 .text-capitalize {
   text-transform: capitalize;
+}
+
+.search-spacing2 {
+    padding: 70px 20px 0px 20px;
+}
+
+@media (max-width: 1193px) {
+    .search-spacing2 {
+        padding: 20px 20px 0px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-spacing2 {
+        padding: 20px 20px 0px 20px;
+    }
+}
+
+@media (max-width: 482px) {
+    .search-spacing2 {
+        padding: 20px 20px 0px 20px;
+    }
+}
+
+.assets {
+    width: 20%
+}
+
+.btn1 {
+    border: none;
+    color: #fff;
+    background-color: blue;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    margin: 10px 20px;
+    padding: 15px 20px 15px 20px;
+    display: block;
+    font-size: 16px;
+	border-radius: 6px;
+}
+
+.btn2 {
+    border: 2px solid red;
+    color: #555;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 20px;
+    padding: 15px 20px 15px 20px;
+    display: inline-block;
+    font-size: 16px;
+	border-radius: 6px;
 }
