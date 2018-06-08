@@ -133,12 +133,12 @@ ul {
 			rgba(8, 180, 245, 0.75),
 			rgba(3, 20, 27, 0.91)), 
 			url("../images/bground.JPG"); */
-    /*
+    
     background: 
         linear-gradient( 
 			rgba(8, 180, 245, 0.75),
 			rgba(3, 20, 27, 0.91)), 
-			url("https://emmanuel-n2112.github.io/Maintenance-Tracker-App-Staging/assets/images/bground.JPG"); */
+			url("https://emmanuel-n2112.github.io/Maintenance-Tracker-App-Staging/assets/images/bground.JPG"); 
     
     background-repeat: no-repeat;
     background-size: cover;
