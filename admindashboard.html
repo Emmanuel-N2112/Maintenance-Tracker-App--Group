@@ -6,7 +6,7 @@
 	<meta name="description" content="Maintenance Tracker App">
 	<meta name="keywords" content="maintenance, app, tracker">
 	<meta name="author" content="Emmanuel Okot">
-	<title>Maintenance Tracker App | Work Order</title>
+	<title>Maintenance Tracker App | Administrator Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/userstyle.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-style.css">
 </head>
@@ -18,9 +18,8 @@
 	
 		<div class="menu">
 			<ul class="nav">
-				<li class="nav"><a href="userworkorder.html" class="active"><span class="icon-home"> </span>Home</a></li>
-				<li class="nav"><a href="userdashboard.html"><span class="icon-meter"> </span>Dashboard</a></li>
-				<li class="nav"><a href="adminlogin.html"><span class="icon-user-tie"> </span>Leaderboard</a></li>
+				<li class="nav"><a href=" "><span class="icon-home"> </span>Home</a></li>
+				<li class="nav"><a href="admindashboard.html" class="active"><span class="icon-meter"> </span>Dashboard</a></li>
                 <input type="search" name="search" placeholder="Search site" class="search-spacing1">
                 <li class="nav"><a href="login.html"><span class="icon-exit"> </span>Logout</a></li>
 			</ul>
@@ -34,13 +33,16 @@
                             <img alt="profile picture" src="assets/images/male-avatar.png"> Emmanuel Nika</button>
                         <div class="dropdown-container">
                             <a href="">Preferences</a>
-                            <a href="userprofile.html">Profile</a>
+                            <a href="">Profile</a>
                         </div>
                     </div>
                     <h3>Maintenance Menu</h3>
                     <li><a href="">Work Order Details</a></li>
+                    <li><a href="">Requests</a></li>
                     <li><a href="">Submissions</a></li>
-                    <li><a href="userassets.html">Assets</a></li>
+                    <li><a href="">Assets</a></li>
+                    <li><a href="">People & Teams</a></li>
+                    <li><a href="">Categories</a></li>
                     <div class="search-spacing2">
                     <label>Find Asset</label>
                         <input type="search" name="search" placeholder=" ">
@@ -49,22 +51,35 @@
 			</div>
 		
             <div class="body-content">
-                <h2>Work Order Details</h2>
-                <div class="content-container">
-                    <div class="tb1">
-                        <ul>
-                            <li><a class="btn2 btn2-2">Accepted</a></li>
-                            <li><a class="btn2 btn2-2">In Progress</a></li>
-                            <li><a class="btn2 btn2-2">Rejected</a></li>
-                            <li><a class="btn2 btn2-2">Closed</a></li>
-                        </ul>
+                <h2>Dashboard</h2>
+                <div class="dashboard">
+                    <div class="box-fluid">
+                        <div class="box">
+                            <h3>Total Work Orders</h3>
+                            <p class="wd2">10</p>
+                        </div>
                     </div>
-                    <div class="tb2">
-                        <h3>Details/</h3>
-                        
+                    <div class="box-fluid">
+                        <div class="box">
+                            <h3>Accepted</h3>
+                            <p class="wd3">4</p>
+                        </div>
+                    </div>
+                    <div class="box-fluid">
+                        <div class="box">
+                            <h3>In Progress</h3>
+                            <p class="wd4">3</p>
+                        </div>
+                    </div>
+                    <div class="box-fluid">
+                        <div class="box">
+                            <h3>Rejected</h3>
+                            <p class="wd1">3</p>
+                        </div>
                     </div>
                 </div>
-		      </div>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%2333ffff&amp;src=en.ug%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Africa%2FNairobi" frameborder="0" scrolling="no"></iframe>
+            </div>
         </div>
 		
 		<footer>

@@ -6,7 +6,7 @@
 	<meta name="description" content="Maintenance Tracker App">
 	<meta name="keywords" content="maintenance, app, tracker">
 	<meta name="author" content="Emmanuel Okot">
-	<title>Maintenance Tracker App | Welcome</title>
+	<title>Maintenance Tracker App | Administrator</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/userstyle.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-style.css">
 </head>
@@ -18,8 +18,8 @@
 	
 		<div class="menu">
 			<ul class="nav">
-				<li class="nav"><a href="#"><span class="icon-home"> </span>Home</a></li>
-				<li class="nav"><a href="#"><span class="icon-meter"> </span>Dashboard</a></li>
+				<li class="nav"><a href="#" class="active"><span class="icon-home"> </span>Home</a></li>
+				<li class="nav"><a href=" "><span class="icon-meter"> </span>Dashboard</a></li>
                 <input type="search" name="search" placeholder="Search site" class="search-spacing1">
                 <li class="nav"><a href="login.html"><span class="icon-exit"> </span>Logout</a></li>
 			</ul>
@@ -28,6 +28,14 @@
 		<div class="nested">
 			<div class="v-menu">
                 <ul>
+                    <div class="profile">
+                        <button class="dropdown-btn">
+                            <img alt="profile picture" src="assets/images/male-avatar.png"> Emmanuel Nika</button>
+                        <div class="dropdown-container">
+                            <a href="">Preferences</a>
+                            <a href="">Profile</a>
+                        </div>
+                    </div>
                     <h3>Maintenance Menu</h3>
                     <li><a href="">Work Order Details</a></li>
                     <li><a href="">Requests</a></li>
@@ -37,8 +45,8 @@
                     <li><a href="">Categories</a></li>
                     <div class="search-spacing2">
                     <label>Find Asset</label>
-                        <input type="search" name="search" placeholder=" "></div>
-                    <a class="submit">Go</a>
+                        <input type="search" name="search" placeholder=" ">
+                    <a class="submit">Go</a></div>
                 </ul>
 			</div>
 		
@@ -53,6 +61,6 @@
 			&copy; Maintenance Tracker App. All Rights Reserved.
 		</footer>
 	</div>
-
+    <script type="text/javascript" src="assets/javascript/custom.js"></script>
 </body>
 </html>
