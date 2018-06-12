@@ -1,0 +1,64 @@
+body{
+	font-family:'open sans',sans-serif;
+	font-size: 17px;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+
+/*HEADER*/
+#main-header{
+	border-bottom: 1px solid #56a79a;
+	padding-top: 40px;
+}
+
+.app-theme {
+	text-align: left;
+	position: relative;
+	float: left;
+}
+
+.login-form-container {
+	position: relative;
+	font-size: 17px;
+	text-align: right;
+	
+
+}
+.login-form .input-container{
+	font-size: 17px;
+}
+/*NAVBAR*/
+#navbar{
+	text-transform:uppercase;
+	l
+
+}
+
+/*Common Classes */
+.primary-text{
+	color: #56a79a;
+}
+.primary-background{
+	background: #56a79a;
+}
+
+	
+}
+/*FORM*/
+#FORM.h3{
+	font-size: 30px;
+	text-align: right; 
+	position: relative;
+
+}
+#FORM.label{
+	color: #888;
+	margin-bottom: 40px;
+	font-size: 20px;
+	background: #333;
+	line-height: 2em;
+
+
+
+}
