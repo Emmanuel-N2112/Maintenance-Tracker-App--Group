@@ -1,0 +1,336 @@
+/* Styling login and signup forms */
+.form1 {
+	grid-area: content1;
+	color: #555;
+	background-color: #f1f1f1;
+	border: 2px solid #ccc;
+	border-radius: 6px;
+	padding: 20px;
+	margin: 15px 20px 15px 20px;
+}
+
+@media (max-width: 482px) {
+    .form1 {
+        padding: 5px;
+        margin: 10px;
+    }
+}
+
+.form1: -moz-placeholder {
+	color: #999;
+	opacity: 1;
+}
+
+.form1 input[type="text"] {
+	margin-bottom: 10px;
+	padding: 15px;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+    width: 100%;
+}
+
+.form1 input[type="password"] {
+	margin-bottom: 10px;
+	padding: 15px;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .form1 input[type="text"], input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 20px 5px 20px 5px;       
+    }
+}
+
+@media (max-width: 482px) {
+    .form1 input[type="text"], input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 12px 2px 12px 2px;
+    }
+}
+
+/* Styling other input forms */
+
+.form2 {
+	grid-area: content1;
+	color: #555;
+	border-radius: 6px;
+	padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.form2 input[type="text"], input[type="tel"], input[type="date"], select, textarea {
+	margin-bottom: 10px;
+	padding: 15px;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+    width: 100%;
+}
+
+.form2 textarea {
+    height: 200px
+}
+
+.textarea {
+    height: 500px;
+}
+
+.form2 input[type="password"] {
+	margin-bottom: 10px;
+	padding: 15px;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .form2 {
+        margin: 15px 20px 15px 20px;
+        text-align: left;
+    }
+    .form2 input[type="text"], input[type="date"], select, input[type="tel"], .from input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 20px 5px 20px 5px;    
+    }
+}
+
+@media (max-width: 482px) {
+    .form2 {
+        margin: 15px 0 15px 0;
+        padding: 5px;
+        text-align: left;
+    }
+    
+    .form2 input[type="text"], input[type="date"], select, input[type="tel"], .form2 input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 12px 2px 12px 2px;
+    }
+}
+
+.form2 label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.col-25 {
+    width: 25%;
+    float: left;
+    margin-top: 6px;
+}
+
+.col-75 {
+    width: 70%;
+    float: left;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width:482px) {
+    .col-25, .col-75 {
+        margin: 0px;
+        width: 100%;
+    }
+    .form2 label {
+        padding: 12px 0px 0px 0px;
+    }
+}
+
+.form2 input[type="submit"] {
+	margin: 10px;
+	padding: 15px;
+	display: inline-block;
+	border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    width: auto;
+    cursor: pointer;
+    vertical-align: middle;
+    width: 150px;
+}
+
+@media (max-width: 482px) {
+     .form2 input[type="submit"] {
+         margin: 10px 0px;
+         width: 100%;
+    }
+}
+
+.add-btn {
+    float: left;
+    background: 
+        linear-gradient( #6079bf, #1c5382);
+    color: #fff;
+    border: none;
+}
+
+.cancel-btn {
+    float: left;
+    background: 
+        linear-gradient( #f1f1f1, rgba(180, 181, 181, 0.91));
+    border: none;
+    color: #333;
+}
+
+.required {
+    color: red;
+}
+
+.error-message p {
+    color: red;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message p {
+    color: green;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #337ab7;
+    color: white;
+}
+
+.modal-body {padding: 0px 16px;}
+
+
+.form3 {
+    color: #555;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.form3 input[type="text"], input[type="tel"], input[type="date"], select, textarea {
+    margin-bottom: 10px;
+    padding: 15px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form3 textarea {
+    height: 50px
+}
+
+@media (max-width: 768px) {
+    .form3 {
+        margin: 15px 20px 15px 20px;
+        text-align: left;
+    }
+    .form3 input[type="text"], input[type="date"], select, input[type="tel"], .from input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 20px 5px 20px 5px;    
+    }
+}
+
+@media (max-width: 482px) {
+    .form3 {
+        margin: 15px 0 15px 0;
+        padding: 5px;
+        text-align: left;
+    }
+    
+    .form3 input[type="text"], input[type="date"], select, input[type="tel"], .form2 input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 12px 2px 12px 2px;
+    }
+}
+
+.modal-btn {
+    text-decoration: none;
+    padding: 1rem;
+    background: #f93;
+    color: white;
+    display: inline-block;
+}
+
+.modal:target {
+    display: table;
+    vertical-align: middle;
+}
