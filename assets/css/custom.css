@@ -1,5 +1,5 @@
 -------------------------------------------
-general css
+general css for login and sign up pages
 -------------------------------------------
 
 body {
@@ -135,14 +135,14 @@ ul {
 		linear-gradient( 
 			rgba(8, 180, 245, 0.75),
 			rgba(3, 20, 27, 0.91)), 
-			url("../images/bground.JPG");
+			url("../images/bground.jpg");
     
-    background: 
+  /*  background: 
         linear-gradient( 
 			rgba(8, 180, 245, 0.75),
 			rgba(3, 20, 27, 0.91)), 
 			url("https://emmanuel-n2112.github.io/Maintenance-Tracker-App-Staging/assets/images/bground.JPG");
-    
+   */ 
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -172,23 +172,6 @@ ul {
         grid-template-areas: 
             "content1"
             "content2";
-    }
-}
-
-.form {
-	grid-area: content1;
-	color: #555;
-	background-color: #f1f1f1;
-	border: 2px solid #ccc;
-	border-radius: 6px;
-	padding: 20px;
-	margin: 15px 20px 15px 20px;
-}
-
-@media (max-width: 482px) {
-    .form {
-        padding: 5px;
-        margin: 10px;
     }
 }
 
@@ -254,6 +237,7 @@ button, input {
 	border-radius: 6px;
     text-align: center;
     width: 30%;
+    border: none;
 }
 
 .submit:hover{
@@ -292,54 +276,12 @@ input[type="search"] {
     }
 }
 
-input[type="text"] {
-	margin-bottom: 10px;
-	padding: 15px;
-	display: block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-    width: 100%;
-}
-
-input[type="password"] {
-	margin-bottom: 10px;
-	padding: 15px;
-	display: block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    input[type="text"], input[type="password"] {
-        display: block;
-        width: 100%;
-        padding: 20px 5px 20px 5px; 
-        
-    }
-}
-
-@media (max-width: 482px) {
-    input[type="text"], input[type="password"] {
-        display: block;
-        width: 100%;
-        padding: 12px 2px 12px 2px;
-    }
-}
-
-.form: -moz-placeholder {
-	color: #999;
-	opacity: 1;
-}
-
 a {
     text-decoration: none;
     color: inherit;
 }
 
-.checkbox {
+.checkbox, .radiobox {
 	position: relative;
 	display: inline;
 	margin: 15px 5px 15px;
@@ -365,4 +307,18 @@ h2 {
     h2, h3 {
         text-align: center
     }
+}
+
+.error-message p {
+    color: red;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message p {
+    color: green;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
 }
